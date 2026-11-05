@@ -722,56 +722,56 @@
     </script>
 
     <script>
-        // Planlanan videoları eleyip, kanaldaki en son aktif videoyu çeken fonksiyon
-        async function loadLatestYouTubeVideo() {
-            const channelId = 'UCidBKpod7mQ56-YwzUT8-jg';
-            const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-
-            try {
-                const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`);
-                const data = await response.json();
-
-                if (data && data.contents) {
-                    const parser = new DOMParser();
-                    const xmlDoc = parser.parseFromString(data.contents, "text/xml");
-                    const entries = xmlDoc.getElementsByTagName("entry");
-
-                    if (entries.length > 0) {
-                        let selectedVideoId = null;
-                        let selectedTitle = "En Son Video";
-
-                        // Listeyi tarayarak yayında olan (planlanmamış) ilk videoyu buluyoruz
-                        for (let i = 0; i < entries.length; i++) {
-                            const entry = entries[i];
-                            const videoIdNode = entry.getElementsByTagName("yt:videoId")[0] || entry.getElementsByTagName("videoId")[0];
-                            const titleNode = entry.getElementsByTagName("title")[0];
-                            
-                            if (videoIdNode) {
-                                selectedVideoId = videoIdNode.textContent;
-                                selectedTitle = titleNode ? titleNode.textContent : "En Son Video";
-                                break; // İlk geçerli videoyu bulduğumuz an döngüyü durduruyoruz
-                            }
-                        }
-
-                        if (selectedVideoId) {
-                            const player = document.getElementById('yt-embed-player');
-                            if (player) {
-                                player.src = `https://www.youtube.com/embed/${selectedVideoId}`;
-                            }
-                            
-                            const titleElem = document.getElementById('yt-video-title');
-                            if (titleElem) {
-                                titleElem.innerText = selectedTitle;
-                            }
-                        }
-                    }
-                }
-            } catch (error) {
-                console.error("YouTube içeriği yüklenemedi:", error);
-            }
+    // YouTube kanalının en son yüklenen içeriklerini otomatik gösteren kesintisiz oynatıcı
+    function loadLatestYouTubeVideo() {
+        const channelId = 'UCidBKpod7mQ56-YwzUT8-jg';
+        const player = document.getElementById('yt-embed-player');
+        const titleElem = document.getElementById('yt-video-title');
+        
+        if (player) {
+            // Kanalın tüm yüklemelerini içeren resmi oynatma listesi ID yapısı (UU + channelId'nin 3. karakterinden sonrasına eklenir)
+            const playlistId = 'UU' + channelId.substring(2);
+            player.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}`;
         }
 
-        document.addEventListener("DOMContentLoaded", loadLatestYouTubeVideo);
+        if (titleElem) {
+            titleElem.innerText = "En Son Yüklenenler";
+        }
+    }
+
+    // Sayfa yüklendiğinde çalıştır
+    document.addEventListener("DOMContentLoaded", loadLatestYouTubeVideo);
+</script>
+
+    <script>
+      async function updateMediaKitStats() {
+        const username = 'MeloriaVT';
+
+        try {
+          const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + username)}`);
+          const twData = await twRes.json();
+          if (twData.contents && !twData.contents.includes('error')) {
+            document.getElementById('total-followers').innerText = twData.contents + '+';
+          }
+
+          const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + username)}`);
+          const ccvData = await ccvRes.json();
+          const ccvElement = document.getElementById('current-ccv');
+          
+          if (ccvData.contents && ccvData.contents !== 'offline' && !ccvData.contents.includes('error')) {
+            ccvElement.innerText = ccvData.contents;
+            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-twitch mb-0.5 animate-pulse';
+          } else {
+            ccvElement.innerText = 'Offline';
+            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-slate-500 mb-0.5';
+          }
+        } catch (error) {
+          console.error("İstatistikler alınamadı:", error);
+        }
+      }
+
+      updateMediaKitStats();
+      setInterval(updateMediaKitStats, 180000);
     </script>
 
     <script>
@@ -831,37 +831,6 @@
 
     document.addEventListener("DOMContentLoaded", loadLatestYouTubeVideo);
 </script>
-
-    <script>
-      async function updateMediaKitStats() {
-        const username = 'MeloriaVT';
-
-        try {
-          const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + username)}`);
-          const twData = await twRes.json();
-          if (twData.contents && !twData.contents.includes('error')) {
-            document.getElementById('total-followers').innerText = twData.contents + '+';
-          }
-
-          const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + username)}`);
-          const ccvData = await ccvRes.json();
-          const ccvElement = document.getElementById('current-ccv');
-          
-          if (ccvData.contents && ccvData.contents !== 'offline' && !ccvData.contents.includes('error')) {
-            ccvElement.innerText = ccvData.contents;
-            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-twitch mb-0.5 animate-pulse';
-          } else {
-            ccvElement.innerText = 'Offline';
-            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-slate-500 mb-0.5';
-          }
-        } catch (error) {
-          console.error("İstatistikler alınamadı:", error);
-        }
-      }
-
-      updateMediaKitStats();
-      setInterval(updateMediaKitStats, 180000);
-    </script>
 
     <script>
     // Sağ tık menüsünü engelleme
