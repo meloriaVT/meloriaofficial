@@ -722,50 +722,26 @@
     </script>
 
     <script>
-        // YouTube RSS üzerinden en son videoyu çeken hatasız fonksiyon
-        async function loadLatestYouTubeVideo() {
-            const channelId = 'UCidBKpod7mQ56-YwzUT8-jg';
-            const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-
-            try {
-                const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`);
-                const data = await response.json();
-
-                if (data && data.contents) {
-                    const parser = new DOMParser();
-                    const xmlDoc = parser.parseFromString(data.contents, "text/xml");
-                    const entries = xmlDoc.getElementsByTagName("entry");
-
-                    if (entries.length > 0) {
-                        const latestEntry = entries[0];
-                        let videoIdNode = latestEntry.getElementsByTagName("yt:videoId")[0] || 
-                                          latestEntry.getElementsByTagName("videoId")[0];
-                        
-                        const videoId = videoIdNode ? videoIdNode.textContent : null;
-                        const titleNode = latestEntry.getElementsByTagName("title")[0];
-                        const videoTitle = titleNode ? titleNode.textContent : "En Son Video";
-
-                        if (videoId) {
-                            const player = document.getElementById('yt-embed-player');
-                            if (player) {
-                                player.src = `https://www.youtube.com/embed/${videoId}`;
-                            }
-                            
-                            const titleElem = document.getElementById('yt-video-title');
-                            if (titleElem) {
-                                titleElem.innerText = videoTitle;
-                            }
-                        }
-                    }
-                }
-            } catch (error) {
-                console.error("YouTube içeriği yüklenemedi:", error);
-            }
+    // YouTube kanalının en son yüklenen içeriklerini otomatik gösteren kesintisiz oynatıcı
+    function loadLatestYouTubeVideo() {
+        const channelId = 'UCidBKpod7mQ56-YwzUT8-jg';
+        const player = document.getElementById('yt-embed-player');
+        const titleElem = document.getElementById('yt-video-title');
+        
+        if (player) {
+            // Kanalın tüm yüklemelerini içeren resmi oynatma listesi ID yapısı (UU + channelId'nin 3. karakterinden sonrasına eklenir)
+            const playlistId = 'UU' + channelId.substring(2);
+            player.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}`;
         }
 
-        // Sayfa yüklendiğinde çalıştır
-        loadLatestYouTubeVideo();
-    </script>
+        if (titleElem) {
+            titleElem.innerText = "En Son Yüklenenler";
+        }
+    }
+
+    // Sayfa yüklendiğinde çalıştır
+    document.addEventListener("DOMContentLoaded", loadLatestYouTubeVideo);
+</script>
 
     <script>
       async function updateMediaKitStats() {
