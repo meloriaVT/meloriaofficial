@@ -722,18 +722,16 @@
     </script>
 
     <script>
-// YouTube kanalının en son yüklenen videolarını otomatik listeleyen resmi ve kesintisiz oynatıcı
+// YouTube kanalının en son yüklenen videolarını otomatik listeleyen resmi oynatıcı
 function loadLatestYouTubeVideo() {
   const channelId = 'UCidBKpod7mQ56-YwzUT8-jg';
   const player = document.getElementById('yt-embed-player');
   
   if (player) {
-    // YouTube'un resmi oynatma listesi embed yapısı (Kanalın yüklediği tüm videoları sondan sıralar)
     player.src = `https://www.youtube.com/embed/videoseries?list=UU${channelId.substring(2)}`;
   }
 }
 
-// Sayfa yüklendiğinde çalıştır
 document.addEventListener("DOMContentLoaded", loadLatestYouTubeVideo);
 </script>
 
