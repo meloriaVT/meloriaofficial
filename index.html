@@ -354,31 +354,37 @@
             <!-- TAB 2: MEDIA KIT -->
             <div id="tab-mediakit" class="tab-content hidden space-y-6">
                 <!-- Overview Stats Header -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  <!-- Toplam Takipçi (Otomatik) -->
-                  <div class="glass-card p-4 rounded-xl text-center">
-                    <div id="total-followers" class="text-2xl md:text-3xl font-extrabold text-neonPink mb-0.5">260+</div>
-                    <div class="text-xs text-slate-400 font-medium uppercase">Toplam Takipçi</div>
-                  </div>
-                  
-                  <!-- Ort. İzleyici / CCV (Otomatik) -->
-                  <div class="glass-card p-4 rounded-xl text-center">
-                    <div id="current-ccv" class="text-2xl md:text-3xl font-extrabold text-twitch mb-0.5">8-20</div>
-                    <div class="text-xs text-slate-400 font-medium uppercase">Canlı İzleyici (CCV)</div>
-                  </div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+  <!-- Toplam Takipçi (Otomatik) -->
+  <div class="glass-card p-4 rounded-xl text-center flex flex-col items-center justify-center">
+    <div id="total-followers" class="text-2xl md:text-3xl font-extrabold text-neonPink mb-0.5">260+</div>
+    <div class="text-xs text-slate-400 font-medium uppercase">Toplam Takipçi</div>
+  </div>
 
-                  <!-- Gen Z Oranı (Statik) -->
-                  <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-2xl md:text-3xl font-extrabold text-neonCyan mb-0.5">%78</div>
-                    <div class="text-xs text-slate-400 font-medium uppercase">Gen Z / Milenyum</div>
-                  </div>
+  <!-- Ort. İzleyici / CCV (Otomatik) -->
+  <div class="glass-card p-4 rounded-xl text-center flex flex-col items-center justify-center">
+    <div id="current-ccv" class="text-2xl md:text-3xl font-extrabold text-slate-500 mb-0.5">Offline</div>
+    <div class="text-xs text-slate-400 font-medium uppercase">Canlı İzleyici (CCV)</div>
+  </div>
 
-                  <!-- Aylık Etkileşim (Statik) -->
-                  <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-2xl md:text-3xl font-extrabold text-kick mb-0.5">4.5K</div>
-                    <div class="text-xs text-slate-400 font-medium uppercase">Aylık Etkileşim</div>
-                        </div>
-                     </div>
+  <!-- Gen Z Oranı (Statik) -->
+  <div class="glass-card p-4 rounded-xl text-center flex flex-col items-center justify-center">
+    <div class="text-2xl md:text-3xl font-extrabold text-neonCyan mb-0.5">%78</div>
+    <div class="text-xs text-slate-400 font-medium uppercase">Gen Z / Milenyum</div>
+  </div>
+
+  <!-- Aylık Etkileşim (Statik + Platform İkonları) -->
+  <div class="glass-card p-4 rounded-xl text-center flex flex-col items-center justify-center">
+    <div class="text-2xl md:text-3xl font-extrabold text-kick mb-0.5">4.5K+</div>
+    <div class="text-xs text-slate-400 font-medium uppercase mb-1">Aylık Etkileşim</div>
+    <div class="flex items-center justify-center gap-2 text-xs text-slate-400">
+      <i class="fa-brands fa-twitch text-[#9146FF]" title="Twitch"></i>
+      <i class="fa-solid fa-bolt text-[#53FC18]" title="Kick"></i>
+      <i class="fa-brands fa-youtube text-[#FF0000]" title="YouTube"></i>
+      <i class="fa-brands fa-tiktok text-[#00F2FE]" title="TikTok"></i>
+    </div>
+  </div>
+</div>
                     
                 <!-- Setup & Hardware Specifications -->
                 <div class="glass-card p-6 rounded-2xl">
