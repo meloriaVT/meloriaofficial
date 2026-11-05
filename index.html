@@ -375,10 +375,17 @@
 
                   <!-- Aylık Etkileşim (Statik) -->
                   <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-2xl md:text-3xl font-extrabold text-kick mb-0.5">1.2M</div>
+                    <div class="text-2xl md:text-3xl font-extrabold text-kick mb-0.5">4.5K</div>
                     <div class="text-xs text-slate-400 font-medium uppercase">Aylık Etkileşim</div>
-                  </div>
-                </div>
+                  
+                      <!-- Platform İkonları -->
+  <div class="flex items-center gap-2 text-xs text-slate-400">
+    <i class="fa-brands fa-twitch text-[#9146FF]" title="Twitch"></i>
+    <i class="fa-solid fa-bolt text-[#53FC18]" title="Kick"></i>
+    <i class="fa-brands fa-youtube text-[#FF0000]" title="YouTube"></i>
+    <i class="fa-brands fa-tiktok text-[#00F2FE]" title="TikTok"></i>
+  </div>
+</div>
 
                 <!-- Setup & Hardware Specifications -->
                 <div class="glass-card p-6 rounded-2xl">
@@ -756,13 +763,13 @@
         const username = 'MeloriaVT';
 
         try {
-          const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + MeloriaVT)}`);
+          const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + username)}`);
           const twData = await twRes.json();
           if (twData.contents && !twData.contents.includes('error')) {
             document.getElementById('total-followers').innerText = twData.contents + '+';
           }
 
-          const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + MeloriaVT)}`);
+          const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + username)}`);
           const ccvData = await ccvRes.json();
           const ccvElement = document.getElementById('current-ccv');
           
