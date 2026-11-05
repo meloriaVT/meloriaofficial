@@ -244,18 +244,20 @@
             </a>
         </section>
 
-      <!-- Navigation Tabs Bar -->
-<div class="flex items-center justify-center gap-2 p-1.5 mb-6 glass-card rounded-2xl border-white/10 max-w-md mx-auto">
-  <button onclick="switchTab('bio')" id="btn-bio" class="tab-btn active flex-1 py-2 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-gradient-to-r from-neonPink to-twitch text-white shadow-md">
-    <i class="fa-solid fa-user"></i> Bio & Content
-  </button>
-  <button onclick="switchTab('mediakit')" id="btn-mediakit" class="tab-btn flex-1 py-2 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-slate-400 hover:text-white">
-    <i class="fa-solid fa-chart-line"></i> Media Kit
-  </button>
-  <button onclick="switchTab('rules')" id="btn-rules" class="tab-btn flex-1 py-2 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-slate-400 hover:text-white">
-    <i class="fa-solid fa-shield-cat"></i> Rules & Art
-  </button>
-</div>
+        <!-- MAIN INTERACTIVE TABS SYSTEM -->
+        <main class="w-full">
+            <!-- Navigation Tabs Bar -->
+            <div class="flex items-center justify-center gap-2 p-1.5 mb-6 glass-card rounded-2xl border-white/10 max-w-md mx-auto">
+                <button onclick="switchTab('bio')" id="tab-btn-bio" class="tab-btn active flex-1 py-2 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-gradient-to-r from-neonPink to-twitch text-white shadow-md">
+                    <i class="fa-solid fa-user"></i> Bio & Content
+                </button>
+                <button onclick="switchTab('mediakit')" id="tab-btn-mediakit" class="tab-btn flex-1 py-2 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-slate-400 hover:text-white">
+                    <i class="fa-solid fa-chart-line"></i> Media Kit
+                </button>
+                <button onclick="switchTab('rules')" id="tab-btn-rules" class="tab-btn flex-1 py-2 px-4 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-slate-400 hover:text-white">
+                    <i class="fa-solid fa-shield-cat"></i> Rules & Art
+                </button>
+            </div>
 
             <!-- TAB 1: BIO & CONTENT -->
             <div id="tab-bio" class="tab-content space-y-6">
@@ -267,7 +269,7 @@
                         <i class="fa-solid fa-sparkles text-neonPink"></i> Hakkımda
                     </h3>
                     <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                        Selamlar! Ben Meloria, müzikli ve çığlıklı yayınlarıyla tanınan Elf Vtuber! 🌙 Twitch ve Kick platformlarında eş zamanlı eğlenceli oyun yayınları, karaoke (VSinger) performansları! Kaos, tatlı sohbet ve bolca müzik için yerini al!
+                        Selamlar! Ben **Meloria**, müzikli ve çığlıklı yayınlarıyla tanınan Elf Vtuber! 🌙 Twitch ve Kick platformlarında eş zamanlı eğlenceli oyun yayınları, karaoke (VSinger) performansları! Kaos, tatlı sohbet ve bolca müzik için yerini al!
                     </p>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
@@ -290,18 +292,7 @@
                             </div>
                         </div>
                     </div>
-            
-<!-- Öne Çıkan Oyunlar (Sadece İstediğin Oyunlar) -->
-<div class="mt-4 bg-cosmic-900/60 p-3.5 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <div class="flex items-center gap-2 text-xs text-slate-400 uppercase font-semibold">
-    <i class="fa-solid fa-gamepad text-neonCyan"></i> Öne Çıkan Oyunlar:
-  </div>
-  <div class="flex items-center gap-2 flex-wrap justify-center">
-    <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-slate-200 border border-white/10 font-medium">Mafia 2</span>
-    <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-slate-200 border border-white/10 font-medium">Outlast</span>
-    <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-slate-200 border border-white/10 font-medium">Duck Detective</span>
-  </div>
-</div>
+                </div>
 
                 <!-- Automatic Latest YouTube Video Showcase -->
 <div class="glass-card p-4 rounded-2xl glow-border">
