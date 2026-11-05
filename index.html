@@ -182,27 +182,27 @@
             </div>
 
            <!-- Interactive Live Status Indicator Pill -->
-<div class="flex items-center gap-3 bg-cosmic-900/80 px-4 py-2 rounded-full border border-white/10 shadow-lg text-xs">
-  <!-- Twitch Live Pill -->
-  <a href="https://twitch.tv/MeloriaVT" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition group">
-    <span class="relative flex h-2.5 w-2.5">
-      <span id="twitch-dot-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-500 opacity-75"></span>
-      <span id="twitch-dot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500"></span>
-    </span>
-    <span class="font-bold text-slate-200 group-hover:text-twitch transition">Twitch: <span id="twitch-status" class="text-slate-400 font-normal">Kontrol ediliyor...</span></span>
-  </a>
-  
-  <span class="text-slate-700">|</span>
-  
-  <!-- Kick Live Pill -->
-  <a href="https://kick.com/MeloriaVT" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition group">
-    <span class="relative flex h-2.5 w-2.5">
-      <span id="kick-dot-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-500 opacity-75"></span>
-      <span id="kick-dot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500"></span>
-    </span>
-    <span class="font-bold text-slate-200 group-hover:text-kick transition">Kick: <span id="kick-status" class="text-slate-400 font-normal">Kontrol ediliyor...</span></span>
-  </a>
-</div>
+            <div class="flex items-center gap-3 bg-cosmic-900/80 px-4 py-2 rounded-full border border-white/10 shadow-lg text-xs">
+              <!-- Twitch Live Pill -->
+              <a href="https://twitch.tv/MeloriaVT" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition group">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span id="twitch-dot-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-500 opacity-75"></span>
+                  <span id="twitch-dot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500"></span>
+                </span>
+                <span class="font-bold text-slate-200 group-hover:text-twitch transition">Twitch: <span id="twitch-status" class="text-slate-400 font-normal">Kontrol ediliyor...</span></span>
+              </a>
+              
+              <span class="text-slate-700">|</span>
+              
+              <!-- Kick Live Pill -->
+              <a href="https://kick.com/MeloriaVT" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition group">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span id="kick-dot-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-500 opacity-75"></span>
+                  <span id="kick-dot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500"></span>
+                </span>
+                <span class="font-bold text-slate-200 group-hover:text-kick transition">Kick: <span id="kick-status" class="text-slate-400 font-normal">Kontrol ediliyor...</span></span>
+              </a>
+            </div>
         </header>
 
         <!-- QUICK SOCIAL LINKS ROW (Carrd Style Primary Buttons) -->
@@ -295,27 +295,27 @@
                 </div>
 
                 <!-- Automatic Latest YouTube Video Showcase -->
-<div class="glass-card p-4 rounded-2xl glow-border">
-  <div class="flex items-center justify-between mb-3">
-    <span class="text-xs font-bold uppercase tracking-wider text-neonPink bg-neonPink/10 px-3 py-1 rounded-full border border-neonPink/20">
-      <i class="fa-brands fa-youtube mr-1 text-red-500"></i> En Son YouTube İçeriği
-    </span>
-    <span id="yt-video-title" class="text-xs text-slate-400 truncate max-w-[200px]">Yükleniyor...</span>
-  </div>
+                <div class="glass-card p-4 rounded-2xl glow-border">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-neonPink bg-neonPink/10 px-3 py-1 rounded-full border border-neonPink/20">
+                      <i class="fa-brands fa-youtube mr-1 text-red-500"></i> En Son YouTube İçeriği
+                    </span>
+                    <span id="yt-video-title" class="text-xs text-slate-400 truncate max-w-[200px]">Yükleniyor...</span>
+                  </div>
 
-  <!-- Dynamic YouTube Embed Container -->
-  <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-white/10 bg-slate-900 flex items-center justify-center">
-    <iframe 
-      id="yt-embed-player"
-      class="absolute top-0 left-0 w-full h-full"
-      src="" 
-      title="MeloriaVT Latest YouTube Content" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
+                  <!-- Dynamic YouTube Embed Container -->
+                  <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-white/10 bg-slate-900 flex items-center justify-center">
+                    <iframe 
+                      id="yt-embed-player"
+                      class="absolute top-0 left-0 w-full h-full"
+                      src="" 
+                      title="MeloriaVT Latest YouTube Content" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
 
                 <!-- Weekly Stream Schedule -->
                 <div class="glass-card p-6 rounded-2xl">
@@ -350,35 +350,34 @@
                 </div>
             </div>
 
-            <!-- Overview Stats Header -->
+            <!-- TAB 2: MEDIA KIT -->
             <div id="tab-mediakit" class="tab-content hidden space-y-6">
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-  <!-- Toplam Takipçi (Otomatik) -->
-  <div class="glass-card p-4 rounded-xl text-center">
-    <div id="total-followers" class="text-2xl md:text-3xl font-extrabold text-neonPink mb-0.5">Yükleniyor...</div>
-    <div class="text-xs text-slate-400 font-medium uppercase">Toplam Takipçi</div>
-  </div>
-  
-  <!-- Ort. İzleyici / CCV (Otomatik) -->
-  <div class="glass-card p-4 rounded-xl text-center">
-    <div id="current-ccv" class="text-2xl md:text-3xl font-extrabold text-twitch mb-0.5">Yükleniyor...</div>
-    <div class="text-xs text-slate-400 font-medium uppercase">Canlı İzleyici (CCV)</div>
-  </div>
+                <!-- Overview Stats Header -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <!-- Toplam Takipçi (Otomatik) -->
+                  <div class="glass-card p-4 rounded-xl text-center">
+                    <div id="total-followers" class="text-2xl md:text-3xl font-extrabold text-neonPink mb-0.5">Yükleniyor...</div>
+                    <div class="text-xs text-slate-400 font-medium uppercase">Toplam Takipçi</div>
+                  </div>
+                  
+                  <!-- Ort. İzleyici / CCV (Otomatik) -->
+                  <div class="glass-card p-4 rounded-xl text-center">
+                    <div id="current-ccv" class="text-2xl md:text-3xl font-extrabold text-twitch mb-0.5">Yükleniyor...</div>
+                    <div class="text-xs text-slate-400 font-medium uppercase">Canlı İzleyici (CCV)</div>
+                  </div>
 
-  <!-- Gen Z Oranı (Statik) -->
-  <div class="glass-card p-4 rounded-xl text-center">
-    <div class="text-2xl md:text-3xl font-extrabold text-neonCyan mb-0.5">%78</div>
-    <div class="text-xs text-slate-400 font-medium uppercase">Gen Z / Milenyum</div>
-  </div>
+                  <!-- Gen Z Oranı (Statik) -->
+                  <div class="glass-card p-4 rounded-xl text-center">
+                    <div class="text-2xl md:text-3xl font-extrabold text-neonCyan mb-0.5">%78</div>
+                    <div class="text-xs text-slate-400 font-medium uppercase">Gen Z / Milenyum</div>
+                  </div>
 
-  <!-- Aylık Etkileşim (Statik) -->
-  <div class="glass-card p-4 rounded-xl text-center">
-    <div class="text-2xl md:text-3xl font-extrabold text-kick mb-0.5">1.2M</div>
-    <div class="text-xs text-slate-400 font-medium uppercase">Aylık Etkileşim</div>
-  </div>
-</div>
-</div>
-            
+                  <!-- Aylık Etkileşim (Statik) -->
+                  <div class="glass-card p-4 rounded-xl text-center">
+                    <div class="text-2xl md:text-3xl font-extrabold text-kick mb-0.5">1.2M</div>
+                    <div class="text-xs text-slate-400 font-medium uppercase">Aylık Etkileşim</div>
+                  </div>
+                </div>
 
                 <!-- Setup & Hardware Specifications -->
                 <div class="glass-card p-6 rounded-2xl">
@@ -622,40 +621,7 @@
             activeBtn.classList.add('bg-gradient-to-r', 'from-neonPink', 'to-twitch', 'text-white', 'shadow-md');
         }
 
-        // 3. MUSIC PLAYER SIMULATION
-        let isPlaying = false;
-        let progressVal = 35;
-        let progressInterval = null;
-
-        function toggleAudio() {
-            const playIcon = document.getElementById('play-icon');
-            isPlaying = !isPlaying;
-
-            if (isPlaying) {
-                playIcon.classList.remove('fa-play');
-                playIcon.classList.add('fa-pause');
-                showToast("Müzik önizlemesi çalınıyor... 🎵");
-                
-                progressInterval = setInterval(() => {
-                    progressVal += 0.5;
-                    if (progressVal > 100) progressVal = 0;
-                    document.getElementById('audio-progress').style.width = progressVal + '%';
-                }, 300);
-            } else {
-                playIcon.classList.remove('fa-pause');
-                playIcon.classList.add('fa-play');
-                clearInterval(progressInterval);
-            }
-        }
-
-        function seekAudio(e) {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const clickPosition = (e.clientX - rect.left) / rect.width;
-            progressVal = clickPosition * 100;
-            document.getElementById('audio-progress').style.width = progressVal + '%';
-        }
-
-        // 4. COPY EMAIL & TOAST NOTIFICATION
+        // 3. COPY EMAIL & TOAST NOTIFICATION
         function copyEmail(email) {
             const tempInput = document.createElement('input');
             tempInput.value = email;
@@ -679,138 +645,126 @@
             }, 3000);
         }
 
-        // 5. CONTACT FORM SUBMIT HANDLER
+        // 4. CONTACT FORM SUBMIT HANDLER
         function handleContact(e) {
             e.preventDefault();
             showToast("Mesajınız iletildi! En kısa sürede dönüş yapılacaktır ✨");
             e.target.reset();
         }
     </script>
+
+    <!-- LIVE STATUS & API SCRIPTS -->
+    <script>
+      async function checkLiveStatuses() {
+        const username = 'MeloriaVT';
+
+        // 1. TWITCH KONTROLÜ
+        try {
+          const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/uptime/' + username)}`);
+          const twData = await twRes.json();
+          
+          const twStatus = document.getElementById('twitch-status');
+          const twDot = document.getElementById('twitch-dot');
+          const twDotPing = document.getElementById('twitch-dot-ping');
+
+          if (twData.contents && !twData.contents.includes('offline') && !twData.contents.includes('not found')) {
+            twStatus.innerText = 'LIVE NOW';
+            twStatus.className = 'text-twitch font-bold animate-pulse';
+            twDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-twitch';
+            twDotPing.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-twitch opacity-75';
+          } else {
+            twStatus.innerText = 'Offline';
+            twStatus.className = 'text-slate-400 font-normal';
+            twDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500';
+            twDotPing.className = 'hidden';
+          }
+        } catch (e) {
+          document.getElementById('twitch-status').innerText = 'Offline';
+        }
+
+        // 2. KICK KONTROLÜ
+        try {
+          const kickRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://kick.com/api/v1/channels/' + username)}`);
+          const kickData = await kickRes.json();
+          const parsed = JSON.parse(kickData.contents);
+          
+          const kickStatus = document.getElementById('kick-status');
+          const kickDot = document.getElementById('kick-dot');
+          const kickDotPing = document.getElementById('kick-dot-ping');
+
+          if (parsed && parsed.livestream && parsed.livestream.is_live) {
+            kickStatus.innerText = 'LIVE NOW';
+            kickStatus.className = 'text-kick font-bold animate-pulse';
+            kickDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-kick';
+            kickDotPing.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-kick opacity-75';
+          } else {
+            kickStatus.innerText = 'Offline';
+            kickStatus.className = 'text-slate-400 font-normal';
+            kickDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500';
+            kickDotPing.className = 'hidden';
+          }
+        } catch (e) {
+          document.getElementById('kick-status').innerText = 'Offline';
+        }
+      }
+
+      checkLiveStatuses();
+      setInterval(checkLiveStatuses, 120000);
+    </script>
+
+    <script>
+      async function loadLatestYouTubeVideo() {
+        const channelId = 'UCidBKpod7mQ56-YwzUT8-jg'; 
+        
+        try {
+          const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+          const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`);
+          const data = await response.json();
+
+          if (data.status === 'ok' && data.items && data.items.length > 0) {
+            const latestVideo = data.items[0];
+            const videoId = latestVideo.link.split('v=')[1] || latestVideo.link.split('/').pop();
+
+            document.getElementById('yt-embed-player').src = `https://www.youtube.com/embed/${videoId}`;
+            document.getElementById('yt-video-title').innerText = latestVideo.title;
+          }
+        } catch (error) {
+          console.error("YouTube içeriği çekilemedi:", error);
+        }
+      }
+
+      loadLatestYouTubeVideo();
+    </script>
+
+    <script>
+      async function updateMediaKitStats() {
+        const username = 'MeloriaVT';
+
+        try {
+          const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + username)}`);
+          const twData = await twRes.json();
+          if (twData.contents && !twData.contents.includes('error')) {
+            document.getElementById('total-followers').innerText = twData.contents + '+';
+          }
+
+          const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + username)}`);
+          const ccvData = await ccvRes.json();
+          const ccvElement = document.getElementById('current-ccv');
+          
+          if (ccvData.contents && ccvData.contents !== 'offline' && !ccvData.contents.includes('error')) {
+            ccvElement.innerText = ccvData.contents;
+            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-twitch mb-0.5 animate-pulse';
+          } else {
+            ccvElement.innerText = 'Offline';
+            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-slate-500 mb-0.5';
+          }
+        } catch (error) {
+          console.error("İstatistikler alınamadı:", error);
+        }
+      }
+
+      updateMediaKitStats();
+      setInterval(updateMediaKitStats, 180000);
+    </script>
 </body>
 </html>
-
-
-
-
-<script>
-  async function checkLiveStatuses() {
-    const username = 'MeloriaVT';
-
-    // 1. TWITCH KONTROLÜ (Decap proxy üzerinden)
-    try {
-      const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/uptime/' + MeloriaVT)}`);
-      const twData = await twRes.json();
-      
-      const twStatus = document.getElementById('twitch-status');
-      const twDot = document.getElementById('twitch-dot');
-      const twDotPing = document.getElementById('twitch-dot-ping');
-
-      if (twData.contents && !twData.contents.includes('offline') && !twData.contents.includes('not found')) {
-        twStatus.innerText = 'LIVE NOW';
-        twStatus.className = 'text-twitch font-bold animate-pulse';
-        twDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-twitch';
-        twDotPing.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-twitch opacity-75';
-      } else {
-        twStatus.innerText = 'Offline';
-        twStatus.className = 'text-slate-400 font-normal';
-        twDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500';
-        twDotPing.className = 'hidden';
-      }
-    } catch (e) {
-      document.getElementById('twitch-status').innerText = 'Offline';
-    }
-
-    // 2. KICK KONTROLÜ (Kick Public API proxy üzerinden)
-    try {
-      const kickRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://kick.com/api/v1/channels/' + MeloriaVT)}`);
-      const kickData = await kickRes.json();
-      const parsed = JSON.parse(kickData.contents);
-      
-      const kickStatus = document.getElementById('kick-status');
-      const kickDot = document.getElementById('kick-dot');
-      const kickDotPing = document.getElementById('kick-dot-ping');
-
-      if (parsed && parsed.livestream && parsed.livestream.is_live) {
-        kickStatus.innerText = 'LIVE NOW';
-        kickStatus.className = 'text-kick font-bold animate-pulse';
-        kickDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-kick';
-        kickDotPing.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-kick opacity-75';
-      } else {
-        kickStatus.innerText = 'Offline';
-        kickStatus.className = 'text-slate-400 font-normal';
-        kickDot.className = 'relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500';
-        kickDotPing.className = 'hidden';
-      }
-    } catch (e) {
-      document.getElementById('kick-status').innerText = 'Offline';
-    }
-  }
-
-  // Sayfa açıldığında çalıştır
-  checkLiveStatuses();
-  // Her 2 dakikada bir otomatik güncelle
-  setInterval(checkLiveStatuses, 120000);
-</script>
-
-<script>
-  async function loadLatestYouTubeVideo() {
-    // Kanal ID'niz
-    const channelId = 'UCidBKpod7mQ56-YwzUT8-jg'; 
-    
-    try {
-      const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${UCidBKpod7mQ56-YwzUT8-jg}`;
-      const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`);
-      const data = await response.json();
-
-      if (data.status === 'ok' && data.items && data.items.length > 0) {
-        const latestVideo = data.items[0]; // En son yüklenen video veya Short
-        
-        // Video ID'sini linkten çekme
-        const videoId = latestVideo.link.split('v=')[1] || latestVideo.link.split('/').pop();
-
-        // Sitedeki oyuncuyu ve başlığı otomatik güncelleme
-        document.getElementById('yt-embed-player').src = `https://www.youtube.com/embed/${i7Rm5ea_M6M}`;
-        document.getElementById('yt-video-title').innerText = latestVideo.title;
-      }
-    } catch (error) {
-      console.error("YouTube içeriği çekilemedi:", error);
-    }
-  }
-
-  // Sayfa yüklendiğinde otomatik çalıştır
-  loadLatestYouTubeVideo();
-</script>
-
-<script>
-  async function updateMediaKitStats() {
-    const username = 'MeloriaVT';
-
-    try {
-      // Twitch Takipçi Sayısını Çekme
-      const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + MeloriaVT)}`);
-      const twData = await twRes.json();
-      if (twData.contents && !twData.contents.includes('error')) {
-        document.getElementById('total-followers').innerText = twData.contents + '+';
-      }
-
-      // Twitch Anlık İzleyici (CCV) Çekme
-      const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + MeloriaVT)}`);
-      const ccvData = await ccvRes.json();
-      const ccvElement = document.getElementById('current-ccv');
-      
-      if (ccvData.contents && ccvData.contents !== 'offline' && !ccvData.contents.includes('error')) {
-        ccvElement.innerText = ccvData.contents;
-        ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-twitch mb-0.5 animate-pulse';
-      } else {
-        ccvElement.innerText = 'Offline';
-        ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-slate-500 mb-0.5';
-      }
-    } catch (error) {
-      console.error("İstatistikler alınamadı:", error);
-    }
-  }
-
-  // Sayfa açıldığında ve her 3 dakikada bir güncelle
-  updateMediaKitStats();
-  setInterval(updateMediaKitStats, 180000);
-</script>
