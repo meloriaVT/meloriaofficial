@@ -165,7 +165,7 @@
             <p class="text-slate-400 font-medium text-sm md:text-base mb-3 flex items-center justify-center gap-2">
                 <span>@MeloriaVT</span>
                 <span class="text-slate-600">•</span>
-                <span class="text-neonPink text-xs font-semibold px-2.5 py-0.5 rounded-full bg-neonPink/10 border border-neonPink/20">Cosmic Idol</span>
+                <span class="text-neonPink text-xs font-semibold px-2.5 py-0.5 rounded-full bg-neonPink/10 border border-neonPink/20">Elf Vtuber</span>
             </p>
 
             <!-- Tags Badges -->
@@ -238,7 +238,7 @@
             </a>
 
             <!-- X / Twitter Button -->
-            <a href="https://x.com" target="_blank" class="glass-card p-3 rounded-xl flex flex-col items-center justify-center gap-1.5 group hover:border-slate-300 hover:shadow-white/20 transition-all duration-300">
+            <a href="https://x.com/MeloriaVT" target="_blank" class="glass-card p-3 rounded-xl flex flex-col items-center justify-center gap-1.5 group hover:border-slate-300 hover:shadow-white/20 transition-all duration-300">
                 <i class="fa-brands fa-x-twitter text-2xl text-slate-200 group-hover:scale-110 transition"></i>
                 <span class="text-xs font-semibold text-slate-200">Twitter / X</span>
             </a>
@@ -269,7 +269,7 @@
                         <i class="fa-solid fa-sparkles text-neonPink"></i> Hakkımda / Lore
                     </h3>
                     <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                        Selamlar! Ben **Meloria**, galaksiler arası müzikli yayınlarıyla tanınan kozmik kedi kızı VTuber! 🌙 Twitch ve Kick platformlarında eş zamanlı eğlenceli oyun yayınları, karaoke (VSinger) performansları ve topluluk etkinlikleri gerçekleştiriyorum. Kaos, tatlı sohbet ve bolca müzik için yerini al!
+                        Selamlar! Ben **Meloria**, müzikli ve çığlıklı yayınlarıyla tanınan Elf Vtuber! 🌙 Twitch ve Kick platformlarında eş zamanlı eğlenceli oyun yayınları, karaoke (VSinger) performansları! Kaos, tatlı sohbet ve bolca müzik için yerini al!
                     </p>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
@@ -279,7 +279,7 @@
                             </div>
                             <div>
                                 <h4 class="text-xs text-slate-400 uppercase font-semibold">Ana Konsept</h4>
-                                <p class="text-sm font-semibold text-slate-200">Cosmic Cat Idol / Singer</p>
+                                <p class="text-sm font-semibold text-slate-200">Variety Gamer / Singer</p>
                             </div>
                         </div>
                         <div class="bg-cosmic-900/60 p-3.5 rounded-xl border border-white/5 flex items-center gap-3">
@@ -288,62 +288,34 @@
                             </div>
                             <div>
                                 <h4 class="text-xs text-slate-400 uppercase font-semibold">Diller</h4>
-                                <p class="text-sm font-semibold text-slate-200">Türkçe & English (Bilingual)</p>
+                                <p class="text-sm font-semibold text-slate-200">Türkçe & English (Bilingual gibimsi)</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Featured Music / Cover Showcase Player Card -->
-                <div class="glass-card p-6 rounded-2xl glow-border">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold uppercase tracking-wider text-neonPink bg-neonPink/10 px-3 py-1 rounded-full border border-neonPink/20">
-                            <i class="fa-solid fa-music mr-1"></i> Son Cover Şarkı
-                        </span>
-                        <span class="text-xs text-slate-400">YouTube Premiere</span>
-                    </div>
+                <!-- Automatic Latest YouTube Video Showcase -->
+<div class="glass-card p-4 rounded-2xl glow-border">
+  <div class="flex items-center justify-between mb-3">
+    <span class="text-xs font-bold uppercase tracking-wider text-neonPink bg-neonPink/10 px-3 py-1 rounded-full border border-neonPink/20">
+      <i class="fa-brands fa-youtube mr-1 text-red-500"></i> Son YouTube İçeriği
+    </span>
+    <span id="yt-video-title" class="text-xs text-slate-400 truncate max-w-[200px]">Yükleniyor...</span>
+  </div>
 
-                    <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <!-- Song Cover Thumbnail -->
-                        <div class="relative w-full sm:w-32 h-32 rounded-xl overflow-hidden bg-slate-800 flex-shrink-0 group">
-                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=300&auto=format&fit=crop" alt="Song Cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                <button onclick="toggleAudio()" id="play-btn" class="w-12 h-12 rounded-full bg-neonPink text-white flex items-center justify-center shadow-lg hover:scale-110 transition">
-                                    <i class="fa-solid fa-play ml-1" id="play-icon"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Song Info & Interactive Player Control -->
-                        <div class="w-full flex flex-col justify-between">
-                            <div>
-                                <h4 class="font-extrabold text-base md:text-lg text-white">Kozmik Rüyalar (Cosmic Dreams)</h4>
-                                <p class="text-xs text-slate-400 mb-2">Original Song / VTuber Cover Debut • Feat. Meloria</p>
-                            </div>
-
-                            <!-- Audio Progress Bar Simulation -->
-                            <div class="w-full space-y-1 my-2">
-                                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden cursor-pointer" onclick="seekAudio(event)">
-                                    <div id="audio-progress" class="bg-gradient-to-r from-neonCyan to-neonPink h-full w-1/3 rounded-full transition-all duration-300"></div>
-                                </div>
-                                <div class="flex justify-between text-[10px] text-slate-500 font-mono">
-                                    <span id="current-time">0:45</span>
-                                    <span>2:30</span>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center gap-3 pt-1">
-                                <a href="https://youtube.com" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-neonPink transition flex items-center gap-1">
-                                    <i class="fa-brands fa-youtube text-red-500"></i> YouTube'da İzle
-                                </a>
-                                <span class="text-slate-700">•</span>
-                                <a href="https://spotify.com" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-green-400 transition flex items-center gap-1">
-                                    <i class="fa-brands fa-spotify text-green-400"></i> Spotify
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- Dynamic YouTube Embed Container -->
+  <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-white/10 bg-slate-900 flex items-center justify-center">
+    <iframe 
+      id="yt-embed-player"
+      class="absolute top-0 left-0 w-full h-full"
+      src="" 
+      title="MeloriaVT Latest YouTube Content" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
 
                 <!-- Weekly Stream Schedule -->
                 <div class="glass-card p-6 rounded-2xl">
@@ -749,4 +721,32 @@
         }
     </script>
 </body>
+</html>
+
+
+
+
+
+
+
+<!-- Diğer HTML Kodların (Cards, Links vb.) -->
+
+    <!-- OTOMATİK KONTROL KODLARI (JAVASCRIPT) -->
+    <script>
+      // Twitch & Kick Otomatik Canlı Yayın Kontrolü
+      async function checkLiveStatuses() {
+        // ... (Verdiğimiz Twitch/Kick kontrol kodları)
+      }
+
+      // YouTube Otomatik İçerik Çekme
+      async function loadLatestYouTubeVideo() {
+        // ... (Verdiğimiz YouTube kontrol kodları)
+      }
+
+      // Sayfa yüklendiğinde ikisini de çalıştır
+      checkLiveStatuses();
+      loadLatestYouTubeVideo();
+    </script>
+
+  </body>
 </html>
