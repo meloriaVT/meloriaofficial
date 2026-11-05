@@ -797,5 +797,37 @@
       updateMediaKitStats();
       setInterval(updateMediaKitStats, 180000);
     </script>
+
+    <script>
+    // Sağ tık menüsünü engelleme
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert("Bu sitede sağ tık ve kaynak kodu görüntüleme devre dışıdır!"); // İsteğe bağlı uyarı yazısı
+    });
+
+    // Klavye kısayollarını engelleme (F12, Ctrl+U, Ctrl+Shift+I, Ctrl+S vb.)
+    document.addEventListener('keydown', function(e) {
+        // F12 tuşu
+        if (e.keyCode === 123) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+U (Kaynak Kodu)
+        if (e.ctrlKey && e.keyCode === 85) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+I veya J veya C (Geliştirici Araçları)
+        if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+S (Sayfayı Kaydet)
+        if (e.ctrlKey && e.keyCode === 83) {
+            e.preventDefault();
+            return false;
+        }
+    });
+</script>
 </body>
 </html>
