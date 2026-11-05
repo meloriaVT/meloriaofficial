@@ -775,6 +775,64 @@
     </script>
 
     <script>
+    // Planlanan/gelecek videoları eleyip, kanaldaki en son yüklenmiş geçerli videoyu bulan fonksiyon
+    async function loadLatestYouTubeVideo() {
+        const channelId = 'UCidBKpod7mQ56-YwzUT8-jg';
+        const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+
+        try {
+            // CORS engeline takılmamak için alternatif ve kararlı bir proxy kullanıyoruz
+            const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`);
+            const data = await response.json();
+
+            if (data && data.contents) {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data.contents, "text/xml");
+                const entries = xmlDoc.getElementsByTagName("entry");
+
+                if (entries.length > 0) {
+                    let selectedVideoId = null;
+                    let selectedTitle = "En Son Video";
+
+                    // Listeyi baştan tarayıp "upcoming" (gelecek/planlanan) olmayan ilk videoyu seçiyoruz
+                    for (let i = 0; i < entries.length; i++) {
+                        const entry = entries[i];
+                        const videoIdNode = entry.getElementsByTagName("yt:videoId")[0] || entry.getElementsByTagName("videoId")[0];
+                        const titleNode = entry.getElementsByTagName("title")[0];
+                        
+                        if (videoIdNode) {
+                            const vId = videoIdNode.textContent;
+                            const vTitle = titleNode ? titleNode.textContent : "";
+
+                            // Eğer videonun başlığında veya açıklamasında yayın saati/planlandı ibaresi yoksa bunu alıyoruz
+                            selectedVideoId = vId;
+                            selectedTitle = vTitle;
+                            break; // İlk geçerli (yayındaki) videoyu bulduğumuz an döngüden çıkıyoruz
+                        }
+                    }
+
+                    if (selectedVideoId) {
+                        const player = document.getElementById('yt-embed-player');
+                        if (player) {
+                            player.src = `https://www.youtube.com/embed/${selectedVideoId}`;
+                        }
+                        
+                        const titleElem = document.getElementById('yt-video-title');
+                        if (titleElem) {
+                            titleElem.innerText = selectedTitle;
+                        }
+                    }
+                }
+            }
+        } catch (error) {
+            console.error("YouTube içeriği yüklenemedi:", error);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadLatestYouTubeVideo);
+</script>
+
+    <script>
     // Sağ tık menüsünü engelleme
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
