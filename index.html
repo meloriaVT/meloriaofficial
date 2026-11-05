@@ -160,7 +160,7 @@
 
             <!-- Title & Handle -->
             <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-1">
-                Meloria <span class="glow-text">VT</span> 🌙
+                Meloria <span class="glow-text">VT</span> 🌙 💜
             </h1>
             <p class="text-slate-400 font-medium text-sm md:text-base mb-3 flex items-center justify-center gap-2">
                 <span>@MeloriaVT</span>
@@ -177,30 +177,32 @@
                     <i class="fa-solid fa-music text-neonPink text-[11px]"></i> VSinger / Covers
                 </span>
                 <span class="text-xs px-3 py-1 rounded-full glass-card text-slate-300 font-medium flex items-center gap-1.5">
-                    <i class="fa-solid fa-sparkles text-amber-400 text-[11px]"></i> EN / TR
+                    <i class="fa-solid fa-sparkles text-amber-400 text-[11px]"></i>  TR
                 </span>
             </div>
 
-            <!-- Interactive Live Status Indicator Pill -->
-            <div class="flex items-center gap-3 bg-cosmic-900/80 px-4 py-2 rounded-full border border-white/10 shadow-lg text-xs">
-                <!-- Twitch Live Pill -->
-                <a href="https://twitch.tv" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition group">
-                    <span class="relative flex h-2.5 w-2.5">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-twitch opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-twitch"></span>
-                    </span>
-                    <span class="font-bold text-slate-200 group-hover:text-twitch transition">Twitch: <span class="text-twitch font-normal">Offline</span></span>
-                </a>
-                <span class="text-slate-700">|</span>
-                <!-- Kick Live Pill -->
-                <a href="https://kick.com" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition group">
-                    <span class="relative flex h-2.5 w-2.5">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-kick opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-kick"></span>
-                    </span>
-                    <span class="font-bold text-slate-200 group-hover:text-kick transition">Kick: <span class="text-kick font-normal">LIVE SOON</span></span>
-                </a>
-            </div>
+           <!-- Interactive Live Status Indicator Pill -->
+<div class="flex items-center gap-3 bg-cosmic-900/80 px-4 py-2 rounded-full border border-white/10 shadow-lg text-xs">
+  <!-- Twitch Live Pill -->
+  <a href="https://twitch.tv/MeloriaVT" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition group">
+    <span class="relative flex h-2.5 w-2.5">
+      <span id="twitch-dot-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-500 opacity-75"></span>
+      <span id="twitch-dot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500"></span>
+    </span>
+    <span class="font-bold text-slate-200 group-hover:text-twitch transition">Twitch: <span id="twitch-status" class="text-slate-400 font-normal">Kontrol ediliyor...</span></span>
+  </a>
+  
+  <span class="text-slate-700">|</span>
+  
+  <!-- Kick Live Pill -->
+  <a href="https://kick.com/MeloriaVT" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition group">
+    <span class="relative flex h-2.5 w-2.5">
+      <span id="kick-dot-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-500 opacity-75"></span>
+      <span id="kick-dot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-500"></span>
+    </span>
+    <span class="font-bold text-slate-200 group-hover:text-kick transition">Kick: <span id="kick-status" class="text-slate-400 font-normal">Kontrol ediliyor...</span></span>
+  </a>
+</div>
         </header>
 
         <!-- QUICK SOCIAL LINKS ROW (Carrd Style Primary Buttons) -->
