@@ -414,32 +414,32 @@
                         Marka entegrasyonları, sponsorluklar veya ortak projeler için aşağıdaki formu doldurabilir veya doğrudan mail atabilirsiniz.
                     </p>
 
-                    <form onsubmit="handleContact(event)" class="space-y-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1">Adınız / Şirket Adı</label>
-                                <input type="text" required placeholder="Örn: Brand Agency" class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1">E-Posta Adresiniz</label>
-                                <input type="email" required placeholder="meloriavt.business@gmail.com" class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition">
-                            </div>
-                        </div>
+                    <form action="https://formspree.io/f/xgaaqlka" method="POST" class="space-y-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <label class="block text-xs font-medium text-slate-300 mb-1">Adınız / Şirket Adı</label>
+      <input type="text" name="name" required placeholder="Örn: Brand Agency" class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition">
+    </div>
+    <div>
+      <label class="block text-xs font-medium text-slate-300 mb-1">E-Posta Adresiniz</label>
+      <input type="email" name="email" required placeholder="meloriavt.business@gmail.com" class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition">
+    </div>
+  </div>
 
-                        <div>
-                            <label class="block text-xs font-medium text-slate-300 mb-1">Mesajınız / Teklif Detayı</label>
-                            <textarea rows="3" required placeholder="Sponsorluk teklifiniz veya proje detayları..." class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition"></textarea>
-                        </div>
+  <div>
+    <label class="block text-xs font-medium text-slate-300 mb-1">Mesajınız / Teklif Detayı</label>
+    <textarea name="message" rows="3" required placeholder="Sponsorluk teklifiniz veya proje detayları..." class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition"></textarea>
+  </div>
 
-                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
-                            <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-neonPink to-twitch hover:opacity-90 font-bold text-xs text-white shadow-lg transition flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-paper-plane"></i> Mesaj Gönder
-                            </button>
-                            <button type="button" onclick="copyEmail('meloriavt.business@gmail.com')" class="text-xs text-slate-400 hover:text-slate-200 transition flex items-center gap-1">
-                                <i class="fa-regular fa-copy"></i> Email Adresini Kopyala (meloriavt.business@gmail.com)
-                            </button>
-                        </div>
-                    </form>
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
+    <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-neonPink to-twitch hover:opacity-90 font-bold text-xs text-white shadow-lg transition flex items-center justify-center gap-2">
+      <i class="fa-solid fa-paper-plane"></i> Mesaj Gönder
+    </button>
+    <button type="button" onclick="copyEmail('meloriavt.business@gmail.com')" class="text-xs text-slate-400 hover:text-slate-200 transition flex items-center gap-1">
+      <i class="fa-regular fa-copy"></i> Email Adresini Kopyala (meloriavt.business@gmail.com)
+    </button>
+  </div>
+</form>
                 </div>
             </div>
 
