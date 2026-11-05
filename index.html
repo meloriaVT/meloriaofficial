@@ -375,16 +375,10 @@
 
                   <!-- Aylık Etkileşim (Statik) -->
                   <div class="glass-card p-4 rounded-xl text-center">
-                    <div class="text-2xl md:text-3xl font-extrabold text-kick mb-0.5">4.5K</div>
+                    <div class="text-2xl md:text-3xl font-extrabold text-kick mb-0.5">1.2M</div>
                     <div class="text-xs text-slate-400 font-medium uppercase">Aylık Etkileşim</div>
-<!-- Platform İkonları -->
-  <div class="flex items-center gap-2 text-xs text-slate-400">
-    <i class="fa-brands fa-twitch text-[#9146FF]" title="Twitch"></i>
-    <i class="fa-solid fa-bolt text-[#53FC18]" title="Kick"></i>
-    <i class="fa-brands fa-youtube text-[#FF0000]" title="YouTube"></i>
-    <i class="fa-brands fa-tiktok text-[#00F2FE]" title="TikTok"></i>
-  </div>
-</div>
+                  </div>
+                </div>
 
                 <!-- Setup & Hardware Specifications -->
                 <div class="glass-card p-6 rounded-2xl">
@@ -411,44 +405,43 @@
                     </div>
                 </div>
 
-                <!-- Sponsor / Business Contact Form Card (Altta, eskisi gibi) -->
-  <div class="glass-card p-6 rounded-2xl border border-neonPink/30 relative">
-    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-      <i class="fa-solid fa-envelope-open-text text-neonPink"></i> İş Birliği & Sponsorluk İletişimi
-    </h3>
-    <p class="text-xs text-slate-400 mb-4">
-      Marka entegrasyonları, sponsorluklar veya ortak projeler için aşağıdaki formu doldurabilir veya doğrudan mail atabilirsiniz.
-    </p>
+                <!-- Sponsor/Business Contact Form Card -->
+                <div class="glass-card p-6 rounded-2xl border-neonPink/30 relative">
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-envelope-open-text text-neonPink"></i> İş Birliği & Sponsorluk İletişimi
+                    </h3>
+                    <p class="text-xs text-slate-400 mb-4">
+                        Marka entegrasyonları, sponsorluklar veya ortak projeler için aşağıdaki formu doldurabilir veya doğrudan mail atabilirsiniz.
+                    </p>
 
-    <form action="https://formspree.io/f/xgaaqlka" method="POST" class="space-y-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-xs font-medium text-slate-300 mb-1">Adınız / Şirket Adı</label>
-          <input type="text" name="name" required placeholder="Örn: Brand Agency" class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition">
-        </div>
-        <div>
-          <label class="block text-xs font-medium text-slate-300 mb-1">E-Posta Adresiniz</label>
-          <input type="email" name="email" required placeholder="meloriavt.business@gmail.com" class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition">
-        </div>
-      </div>
+                    <form onsubmit="handleContact(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Adınız / Şirket Adı</label>
+                                <input type="text" required placeholder="Örn: Brand Agency" class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">E-Posta Adresiniz</label>
+                                <input type="email" required placeholder="meloriavt.business@gmail.com" class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition">
+                            </div>
+                        </div>
 
-      <div>
-        <label class="block text-xs font-medium text-slate-300 mb-1">Mesajınız / Teklif Detayı</label>
-        <textarea name="message" rows="3" required placeholder="Sponsorluk teklifiniz veya proje detayları..." class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition"></textarea>
-      </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Mesajınız / Teklif Detayı</label>
+                            <textarea rows="3" required placeholder="Sponsorluk teklifiniz veya proje detayları..." class="w-full bg-cosmic-900/90 border border-white/10 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-neonPink transition"></textarea>
+                        </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
-        <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-neonPink to-twitch hover:opacity-90 font-bold text-xs text-white shadow-lg transition flex items-center justify-center gap-2">
-          <i class="fa-solid fa-paper-plane"></i> Mesaj Gönder
-        </button>
-        <button type="button" onclick="copyEmail('meloriavt.business@gmail.com')" class="text-xs text-slate-400 hover:text-slate-200 transition flex items-center gap-1">
-          <i class="fa-regular fa-copy"></i> Email Adresini Kopyala (meloriavt.business@gmail.com)
-        </button>
-      </div>
-    </form>
-  </div>
-
-</div>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
+                            <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-neonPink to-twitch hover:opacity-90 font-bold text-xs text-white shadow-lg transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Mesaj Gönder
+                            </button>
+                            <button type="button" onclick="copyEmail('meloriavt.business@gmail.com')" class="text-xs text-slate-400 hover:text-slate-200 transition flex items-center gap-1">
+                                <i class="fa-regular fa-copy"></i> Email Adresini Kopyala (meloriavt.business@gmail.com)
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
             <!-- TAB 3: CREDITS & COMMUNITY RULES -->
             <div id="tab-rules" class="tab-content hidden space-y-6">
@@ -759,42 +752,34 @@
 </script>
 
     <script>
-  async function updateMediaKitStats() {
-    const username = 'MeloriaVT';
+      async function updateMediaKitStats() {
+        const username = 'MeloriaVT';
 
-    try {
-      // 1. Twitch Takipçi Sayısı
-      const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + username)}`);
-      const twData = await twRes.json();
-      
-      if (twData.contents && !twData.contents.includes('error')) {
-        document.getElementById('total-followers').innerText = twData.contents + '+';
-      } else {
-        document.getElementById('total-followers').innerText = '260+';
+        try {
+          const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + MeloriaVT)}`);
+          const twData = await twRes.json();
+          if (twData.contents && !twData.contents.includes('error')) {
+            document.getElementById('total-followers').innerText = twData.contents + '+';
+          }
+
+          const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + MeloriaVT)}`);
+          const ccvData = await ccvRes.json();
+          const ccvElement = document.getElementById('current-ccv');
+          
+          if (ccvData.contents && ccvData.contents !== 'offline' && !ccvData.contents.includes('error')) {
+            ccvElement.innerText = ccvData.contents;
+            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-twitch mb-0.5 animate-pulse';
+          } else {
+            ccvElement.innerText = 'Offline';
+            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-slate-500 mb-0.5';
+          }
+        } catch (error) {
+          console.error("İstatistikler alınamadı:", error);
+        }
       }
 
-      // 2. Twitch Canlı İzleyici (CCV)
-      const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + username)}`);
-      const ccvData = await ccvRes.json();
-      const ccvElement = document.getElementById('current-ccv');
-      
-      if (ccvData.contents && ccvData.contents !== 'offline' && !ccvData.contents.includes('error')) {
-        ccvElement.innerText = ccvData.contents;
-        ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-twitch mb-0.5 animate-pulse';
-      } else {
-        ccvElement.innerText = 'Offline';
-        ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-slate-500 mb-0.5';
-      }
-    } catch (error) {
-      console.error("İstatistikler alınamadı:", error);
-      document.getElementById('total-followers').innerText = '260+';
-      document.getElementById('current-ccv').innerText = 'Offline';
-    }
-  }
-
-  // Sayfa açıldığında ve her 3 dakikada bir çalıştır
-  updateMediaKitStats();
-  setInterval(updateMediaKitStats, 180000);
-</script>
+      updateMediaKitStats();
+      setInterval(updateMediaKitStats, 180000);
+    </script>
 </body>
 </html>
