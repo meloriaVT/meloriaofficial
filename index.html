@@ -752,34 +752,42 @@
 </script>
 
     <script>
-      async function updateMediaKitStats() {
-        const username = 'MeloriaVT';
+  async function updateMediaKitStats() {
+    const username = 'MeloriaVT';
 
-        try {
-          const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + MeloriaVT)}`);
-          const twData = await twRes.json();
-          if (twData.contents && !twData.contents.includes('error')) {
-            document.getElementById('total-followers').innerText = twData.contents + '+';
-          }
-
-          const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + MeloriaVT)}`);
-          const ccvData = await ccvRes.json();
-          const ccvElement = document.getElementById('current-ccv');
-          
-          if (ccvData.contents && ccvData.contents !== 'offline' && !ccvData.contents.includes('error')) {
-            ccvElement.innerText = ccvData.contents;
-            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-twitch mb-0.5 animate-pulse';
-          } else {
-            ccvElement.innerText = 'Offline';
-            ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-slate-500 mb-0.5';
-          }
-        } catch (error) {
-          console.error("İstatistikler alınamadı:", error);
-        }
+    try {
+      // 1. Twitch Takipçi Sayısı
+      const twRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/follower_count/' + username)}`);
+      const twData = await twRes.json();
+      
+      if (twData.contents && !twData.contents.includes('error')) {
+        document.getElementById('total-followers').innerText = twData.contents + '+';
+      } else {
+        document.getElementById('total-followers').innerText = '15K+';
       }
 
-      updateMediaKitStats();
-      setInterval(updateMediaKitStats, 180000);
-    </script>
+      // 2. Twitch Canlı İzleyici (CCV)
+      const ccvRes = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://decapi.me/twitch/viewercount/' + username)}`);
+      const ccvData = await ccvRes.json();
+      const ccvElement = document.getElementById('current-ccv');
+      
+      if (ccvData.contents && ccvData.contents !== 'offline' && !ccvData.contents.includes('error')) {
+        ccvElement.innerText = ccvData.contents;
+        ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-twitch mb-0.5 animate-pulse';
+      } else {
+        ccvElement.innerText = 'Offline';
+        ccvElement.className = 'text-2xl md:text-3xl font-extrabold text-slate-500 mb-0.5';
+      }
+    } catch (error) {
+      console.error("İstatistikler alınamadı:", error);
+      document.getElementById('total-followers').innerText = '15K+';
+      document.getElementById('current-ccv').innerText = 'Offline';
+    }
+  }
+
+  // Sayfa açıldığında ve her 3 dakikada bir çalıştır
+  updateMediaKitStats();
+  setInterval(updateMediaKitStats, 180000);
+</script>
 </body>
 </html>
